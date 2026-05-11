@@ -2,8 +2,8 @@ import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/ruijiazhang-homepage/' : '/',
+export default defineConfig({
+  base: '/',
   plugins: [vue()],
   build: {
     outDir: 'build',
@@ -19,4 +19,4 @@ export default defineConfig(({ command }) => ({
     host: '0.0.0.0',
     port: 5173
   }
-}))
+})
