@@ -1,10 +1,5 @@
-import type {
-  AboutContentResponse,
-  AwardsContentResponse,
-  GalleryContentResponse,
-  SiteContentResponse
-} from '../types/content'
-import { resolveMediaAsset } from './media'
+import type { AboutContentResponse, AwardsContentResponse, GalleryContentResponse, SiteContentResponse } from '../types/content';
+import { resolveMediaAsset } from './media';
 
 export const siteContent: SiteContentResponse = {
   profile: {
@@ -15,36 +10,36 @@ export const siteContent: SiteContentResponse = {
     location: 'Manchester, United Kingdom',
     email: '',
     homeImagePath: resolveMediaAsset('/media/site/home/home-portrait.jpeg'),
-    aboutImagePath: resolveMediaAsset('/media/site/about/about-portrait.jpeg')
-  }
-}
+    aboutImagePath: resolveMediaAsset('/media/site/about/about-portrait.jpeg'),
+  },
+};
 
 export const aboutContent: AboutContentResponse = {
   paragraphs: [
     {
       key: 'first-encounter',
-      html: `Ruijia Zhang's first encounter with music began when she heard <span class="highlight">"Memory" from the musical Cats</span>. Deeply moved by the beauty of the voice, she began studying vocal technique with a professor from Chongqing University while continuing her high school studies. During this period, she attended the professor's masterclasses and regularly took part in choral and solo performances at school. She also won the school's Top Ten Singers Competition for consecutive years.`
+      html: `Ruijia Zhang's first encounter with music began when she heard <span class="highlight">《Memory》 from the musical Cats</span>. Deeply moved by the beauty of the voice, she began studying vocal technique with a professor from Chongqing University while continuing her high school studies. During this period, she attended the professor's masterclasses and regularly took part in choral and solo performances at school. She also won the school's Top Ten Singers Competition for consecutive years.`,
     },
     {
       key: 'college-direction',
-      html: `When preparing for the National College Entrance Examination, Ruijia decided to follow her passion for music and pursue it as a future career. She chose to study <span class="highlight">Opera Performance</span> and was admitted to <span class="highlight">Sichuan University</span>, a Project 985 comprehensive university in China, with an excellent ranking of tenth in the province.`
+      html: `When preparing for the National College Entrance Examination, Ruijia decided to follow her passion for music and pursue it as a future career. She chose to study <span class="highlight">Opera Performance</span> and was admitted to <span class="highlight">Sichuan University</span>, a Project 985 comprehensive university in China, with an excellent ranking of tenth in the province.`,
     },
     {
       key: 'undergraduate-growth',
-      html: `During her undergraduate studies, she received <span class="highlight">university scholarships for three consecutive years</span>. Alongside her academic work, she continued her professional vocal training at the Sichuan Conservatory of Music with outstanding young soprano teachers. During this time, she began to build a wide range of stage experience, including contemporary popular performances, classical concerts and competitions.`
+      html: `During her undergraduate studies, she received <span class="highlight">university scholarships for three consecutive years</span>. Alongside her academic work, she continued her professional vocal training at the Sichuan Conservatory of Music with outstanding young soprano teachers. During this time, she began to build a wide range of stage experience, including contemporary popular performances, classical concerts and competitions.`,
     },
     {
       key: 'choral-and-leadership',
-      html: `In choral performance, she participated in the China Choral Music Week, where her choir won a <span class="highlight">Gold Award</span>, and the China International Chorus Festival, where they received <span class="highlight">First Prize</span>. She was also actively involved in student societies and served as Head of the Arts Troupe in the Student Union. In addition, she won the Provincial Second Prize in the National College Student Advertising Art Competition.`
+      html: `In choral performance, she participated in the China Choral Music Week, where her choir won a <span class="highlight">Gold Award</span>, and the China International Chorus Festival, where they received <span class="highlight">First Prize</span>. She was also actively involved in student societies and served as Head of the Arts Troupe in the Student Union. In addition, she won the Provincial Second Prize in the National College Student Advertising Art Competition.`,
     },
     {
       key: 'postgraduate-study',
-      html: `Ruijia graduated with honors and a high GPA of <span class="highlight">3.8</span>. She is currently studying at the <span class="highlight">Royal Northern College of Music</span>, where she continues her postgraduate training under the guidance of <span class="highlight">Sarah Rhodes</span>.`
+      html: `Ruijia graduated with honors and a high GPA of <span class="highlight">3.8</span>. She is currently studying at the <span class="highlight">Royal Northern College of Music</span>, where she continues her postgraduate training under the guidance of <span class="highlight">Sarah Rhodes</span>.`,
     },
     {
       key: 'artistic-focus',
-      html: `Ruijia is committed to continuing her artistic development as a soprano, with a particular focus on <span class="highlight">opera performance, vocal refinement and expressive stage communication</span>. She hopes to build a career that allows her to share the emotional power of music with wider audiences.`
-    }
+      html: `Ruijia is committed to continuing her artistic development as a soprano, with a particular focus on <span class="highlight">opera performance, vocal refinement and expressive stage communication</span>. She hopes to build a career that allows her to share the emotional power of music with wider audiences.`,
+    },
   ],
   aboutImagePath: resolveMediaAsset('/media/site/about/about-portrait.jpeg'),
   educationTimeline: [
@@ -54,7 +49,7 @@ export const aboutContent: AboutContentResponse = {
       school: 'Chongqing University',
       major: 'Private vocal study and masterclasses with a professor from Chongqing University.',
       logoPath: resolveMediaAsset('/media/logos/Chongqing_university.png'),
-      logoShape: 'round'
+      logoShape: 'round',
     },
     {
       key: 'scu-undergraduate',
@@ -62,7 +57,7 @@ export const aboutContent: AboutContentResponse = {
       school: 'Sichuan University',
       major: 'Undergraduate degree in Opera Performance.',
       logoPath: resolveMediaAsset('/media/logos/Sichuan_University_logo.png'),
-      logoShape: 'round'
+      logoShape: 'round',
     },
     {
       key: 'scm-vocal-training',
@@ -70,7 +65,7 @@ export const aboutContent: AboutContentResponse = {
       school: 'Sichuan Conservatory of Music',
       major: 'Professional vocal training with young soprano teachers alongside undergraduate study.',
       logoPath: resolveMediaAsset('/media/logos/Sichuan_Conservatory_of_Music_logo.png'),
-      logoShape: 'round'
+      logoShape: 'round',
     },
     {
       key: 'rncm-postgraduate',
@@ -78,10 +73,10 @@ export const aboutContent: AboutContentResponse = {
       school: 'Royal Northern College of Music',
       major: 'Postgraduate study in Opera Performance under the guidance of Sarah Rhodes.',
       logoPath: resolveMediaAsset('/media/logos/RNCM.png'),
-      logoShape: 'wide'
-    }
-  ]
-}
+      logoShape: 'wide',
+    },
+  ],
+};
 
 export const awardsContent: AwardsContentResponse = {
   awards: [
@@ -89,58 +84,58 @@ export const awardsContent: AwardsContentResponse = {
       key: 'peacock-cup-2024',
       year: '2024',
       title: 'The 11th Peacock Cup National Vocal Exhibition of Higher Arts Institutions, Vocal Opera Category',
-      result: 'Silver Award'
+      result: 'Silver Award',
     },
     {
       key: 'scholarship-2022-2024',
       year: '2022 - 2024',
       title: 'University-level Scholarship',
-      result: 'Recipient'
+      result: 'Recipient',
     },
     {
       key: 'chorus-festival-2023',
       year: '2023',
       title: 'China International Chorus Festival',
-      result: 'First Prize'
+      result: 'First Prize',
     },
     {
       key: 'national-choral-competition-2023',
       year: '2023',
       title: 'National Choral Competition, Youth Category',
-      result: 'Champion'
+      result: 'Champion',
     },
     {
       key: 'choral-music-week-2023',
       year: '2023',
       title: 'China Choral Music Week',
-      result: 'Gold Award'
+      result: 'Gold Award',
     },
     {
       key: 'innovative-music-2023',
       year: '2023',
       title: 'Sichuan Innovative Music Competition',
-      result: 'Silver Award'
+      result: 'Silver Award',
     },
     {
       key: 'advertising-art-2022',
       year: '2022',
       title: 'National College Student Advertising Art Competition',
-      result: 'Provincial Second Prize'
+      result: 'Provincial Second Prize',
     },
     {
       key: 'peacock-cup-2022',
       year: '2022',
       title: 'The 9th Peacock Cup National Vocal Exhibition of Higher Arts Institutions',
-      result: 'Excellence Award'
+      result: 'Excellence Award',
     },
     {
       key: 'top-ten-singers-2018',
       year: '2018',
       title: 'Top Ten Singers Competition',
-      result: 'Champion'
-    }
-  ]
-}
+      result: 'Champion',
+    },
+  ],
+};
 
 export const galleryContent: GalleryContentResponse = {
   items: [
@@ -165,6 +160,6 @@ export const galleryContent: GalleryContentResponse = {
     { key: 'video-300436207', type: 'video', alt: 'Performance video 3', srcPath: resolveMediaAsset('/media/gallery/300436207.mp4') },
     { key: 'video-493280724', type: 'video', alt: 'Performance video 4', srcPath: resolveMediaAsset('/media/gallery/493280724.mp4') },
     { key: 'video-571942330', type: 'video', alt: 'Performance video 5', srcPath: resolveMediaAsset('/media/gallery/571942330.mp4') },
-    { key: 'video-709622218', type: 'video', alt: 'Performance video 6', srcPath: resolveMediaAsset('/media/gallery/709622218.mp4') }
-  ]
-}
+    { key: 'video-709622218', type: 'video', alt: 'Performance video 6', srcPath: resolveMediaAsset('/media/gallery/709622218.mp4') },
+  ],
+};
