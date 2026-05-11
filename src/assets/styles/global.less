@@ -1,0 +1,123 @@
+:root {
+  --text-primary: #2d3a31;
+  --text-secondary: #5b675e;
+  --text-muted: #7c857d;
+  --accent: #8c9a84;
+  --accent-deep: #c27b66;
+  --page-gutter: 72px;
+  --font-display: "Playfair Display", "Songti SC", "STSong", serif;
+  --font-body: "Source Sans 3", "PingFang SC", "Hiragino Sans GB", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at 14% 12%, rgba(194, 123, 102, 0.12), transparent 24%),
+    radial-gradient(circle at 84% 18%, rgba(140, 154, 132, 0.16), transparent 22%),
+    linear-gradient(180deg, #fbfaf7 0%, #f9f8f4 52%, #f3f0ea 100%);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: transparent;
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.015;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 8% 24%, rgba(220, 207, 194, 0.38), transparent 28%),
+      radial-gradient(circle at 86% 76%, rgba(140, 154, 132, 0.12), transparent 24%);
+  }
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-inline: var(--page-gutter);
+  min-height: 100vh;
+}
+
+em {
+  font-style: italic;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(140, 154, 132, 0.22);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  color: var(--accent);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 600;
+
+  &::before {
+    content: "";
+    width: 1.8rem;
+    height: 1px;
+    background: rgba(140, 154, 132, 0.45);
+  }
+}
+
+::selection {
+  background: rgba(194, 123, 102, 0.18);
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-gutter: 18px;
+  }
+}
