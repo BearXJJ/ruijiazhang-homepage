@@ -44,7 +44,7 @@ export const aboutContent: AboutContentResponse = {
     },
     {
       key: 'recent-training-and-performance',
-      html: `Recent training and performance highlights include a little lecture with David Norris, <span class="highlight">masterclasses with Emanuela De Santis Salucci, Susan McCulloch and Ron Morris</span>, and performing the <span class="highlight">role of Angelica</span> in Martín y Soler’s Il burbero di buon cuore as part of the RNCM Opera Scenes. Ruijia was also selected as a <span class="highlight">finalist for The Joyce and Michael Kennedy Award for the Singing of Strauss</span>.`,
+      html: `Recent training and performance highlights include a little lecture with David Norris, masterclasses with <span class="highlight">Emanuela De Santis Salucci</span>, <span class="highlight">Susan McCulloch</span> and <span class="highlight">Ron Morris</span>, and performing the role of <span class="highlight">Angelica</span> in Martín y Soler’s Il burbero di buon cuore as part of the RNCM Opera Scenes. Ruijia was also selected as a finalist for The Joyce and Michael Kennedy Award for the Singing of Strauss.`,
     },
   ],
   aboutImagePath: resolveMediaAsset('/media/site/about/about-portrait.jpeg'),
