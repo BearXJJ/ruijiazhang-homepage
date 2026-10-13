@@ -10,9 +10,10 @@
         <div class="hero-name" v-motion="revealMotion(2, 28)">{{ profile.name }}</div>
         <div class="hero-headline" v-motion="revealMotion(3, 24)">{{ profile.headline }}</div>
         <div class="lead" v-motion="revealMotion(4, 24)">{{ profile.intro }}</div>
+        <p class="dma-interest" v-motion="revealMotion(5, 24)">{{ profile.dmaInterest }}</p>
       </div>
 
-      <div class="bottom" v-motion="revealMotion(5, 18)">
+      <div class="bottom" v-motion="revealMotion(6, 18)">
         <div class="meta">
           <span>{{ profile.location }}</span>
           <span>Soprano</span>
@@ -41,6 +42,7 @@
 
     <div class="mobile-text" v-motion="revealMotion(2, 24)">
       <p class="mobile-intro">{{ profile.intro }}</p>
+      <p class="mobile-dma-interest">{{ profile.dmaInterest }}</p>
     </div>
   </section>
 </template>
@@ -57,7 +59,7 @@ const profile = siteContent.profile
   flex: 1;
   min-height: 0;
   display: flex;
-  gap: 3.4rem;
+  gap: clamp(3rem, 8vw, 8rem);
   align-items: center;
   overflow: hidden;
   isolation: isolate;
@@ -66,11 +68,13 @@ const profile = siteContent.profile
   .copy,
   .photo-side {
     flex: 1 1 0;
+    min-width: 0;
     min-height: 0;
   }
 
   .copy {
     position: relative;
+    left: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -135,7 +139,7 @@ const profile = siteContent.profile
       max-width: 9ch;
       margin: 0.4rem 0 0;
       font-family: var(--font-display);
-      font-size: 6.6rem;
+      font-size: 6.8rem;
       line-height: 0.9;
       letter-spacing: -0.03em;
       transition:
@@ -146,11 +150,11 @@ const profile = siteContent.profile
     .hero-headline {
       position: relative;
       z-index: 1;
-      max-width: 33rem;
+      max-width: 48rem;
       margin: 1.4rem 0 0;
       color: var(--text-secondary);
       font-weight: 500;
-      font-size: 1.58rem;
+      font-size: 1.62rem;
       line-height: 1.58;
       transition:
         transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -168,15 +172,22 @@ const profile = siteContent.profile
         letter-spacing 500ms ease;
     }
 
-    .lead {
-      max-width: 42rem;
+    .lead,
+    .dma-interest {
+      max-width: 60rem;
       margin: 1.55rem 0 0;
       color: var(--text-secondary);
-      font-size: 1.16rem;
-      line-height: 1.95;
+      font-size: 1.2rem;
+      line-height: 1.85;
       transition:
         transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
         color 400ms ease;
+    }
+
+    .dma-interest {
+      margin-top: 1rem;
+      color: var(--accent-deep);
+      font-weight: 700;
     }
 
     .meta {
@@ -204,7 +215,9 @@ const profile = siteContent.profile
   }
 
   .photo-side {
+    flex: 0 0 min(36%, 45rem, calc((100dvh - var(--topbar-offset) - 6.5rem) * 0.9 * 2 / 3));
     position: relative;
+    left: -2rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -227,8 +240,8 @@ const profile = siteContent.profile
 
     .photo {
       position: relative;
-      width: min(100%, 50rem);
-      aspect-ratio: 14 / 10;
+      width: 100%;
+      aspect-ratio: 2 / 3;
       margin: 0;
       overflow: hidden;
       border-radius: 32px;
@@ -255,7 +268,7 @@ const profile = siteContent.profile
         height: 100%;
         display: block;
         object-fit: cover;
-        object-position: center 32%;
+        object-position: center bottom;
         filter: saturate(0.94) contrast(1.02);
         transition:
           transform 1200ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -368,7 +381,7 @@ const profile = siteContent.profile
       margin: 0;
       color: var(--text-primary);
       font-family: var(--font-display);
-      font-size: 3.65rem;
+      font-size: 3.85rem;
       font-weight: 600;
       line-height: 0.92;
     }
@@ -398,7 +411,7 @@ const profile = siteContent.profile
       img {
         display: block;
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
         object-position: center 18%;
       }
@@ -411,11 +424,17 @@ const profile = siteContent.profile
       padding-top: 0.1rem;
     }
 
-    .mobile-intro {
+    .mobile-intro,
+    .mobile-dma-interest {
       margin: 0;
       color: var(--text-secondary);
-      font-size: 0.96rem;
+      font-size: 1rem;
       line-height: 1.7;
+    }
+
+    .mobile-dma-interest {
+      color: var(--accent-deep);
+      font-weight: 700;
     }
   }
 }

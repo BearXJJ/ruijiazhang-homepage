@@ -2,6 +2,7 @@ export interface SiteProfile {
   name: string
   headline: string
   intro: string
+  dmaInterest: string
   location: string
   email: string
   homeImagePath: string

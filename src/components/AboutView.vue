@@ -12,12 +12,7 @@
         <div class="eyebrow section-label" v-motion="revealMotion(1, 14)">PROFILE</div>
 
         <article class="about-story">
-          <p
-            v-for="(paragraph, index) in paragraphs"
-            :key="paragraph.key"
-            :class="{ closing: index === paragraphs.length - 1 }"
-            v-motion="revealMotion(index + 2, 18)"
-            v-html="paragraph.html"></p>
+          <p v-for="(paragraph, index) in paragraphs" :key="paragraph.key" :class="{ closing: index === paragraphs.length - 1 }" v-motion="revealMotion(index + 2, 18)" v-html="paragraph.html"></p>
         </article>
       </div>
 
@@ -50,10 +45,10 @@
 </template>
 
 <script setup lang="ts">
-import { pageMotion, revealMotion } from '../utils/motionPresets'
-import { aboutContent } from '../content/siteContent'
+import { pageMotion, revealMotion } from '../utils/motionPresets';
+import { aboutContent } from '../content/siteContent';
 
-const { paragraphs, aboutImagePath, educationTimeline } = aboutContent
+const { paragraphs, aboutImagePath, educationTimeline } = aboutContent;
 </script>
 
 <style lang="less" scoped>
@@ -137,7 +132,7 @@ const { paragraphs, aboutImagePath, educationTimeline } = aboutContent
         p {
           margin: 0;
           color: var(--text-secondary);
-          font-size: 1.2rem;
+          font-size: 1.3rem;
           line-height: 1.9;
         }
 
@@ -167,8 +162,8 @@ const { paragraphs, aboutImagePath, educationTimeline } = aboutContent
 
       .note-photo {
         width: 100%;
+        aspect-ratio: 4 / 5;
         margin: 0;
-        aspect-ratio: 16 / 10;
         overflow: hidden;
         border-radius: 18px;
         box-shadow: 0 16px 34px -26px rgba(45, 58, 49, 0.28);
@@ -178,7 +173,7 @@ const { paragraphs, aboutImagePath, educationTimeline } = aboutContent
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center 30%;
+          object-position: center bottom;
         }
       }
 
@@ -348,10 +343,6 @@ const { paragraphs, aboutImagePath, educationTimeline } = aboutContent
         width: 100%;
         min-width: 0;
         gap: 1.7rem;
-
-        .note-photo {
-          aspect-ratio: 4 / 3;
-        }
 
         .timeline-wrap {
           .timeline {

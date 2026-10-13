@@ -73,16 +73,17 @@ const cardMotion = {
   }
 }
 
-const mediaItems = ref<GalleryViewItem[]>(
-  shuffleItems(
-    galleryContent.items.map((item) => ({
-      id: item.key,
-      type: item.type,
-      src: item.srcPath,
-      alt: item.alt
-    }))
-  )
-)
+const featuredVideoId = 'video-2008734611'
+const galleryItems: GalleryViewItem[] = galleryContent.items.map((item) => ({
+  id: item.key,
+  type: item.type,
+  src: item.srcPath,
+  alt: item.alt
+}))
+const mediaItems = ref<GalleryViewItem[]>([
+  ...galleryItems.filter((item) => item.id === featuredVideoId),
+  ...shuffleItems(galleryItems.filter((item) => item.id !== featuredVideoId))
+])
 const activeItem = ref<GalleryViewItem | null>(null)
 const viewerReady = ref(false)
 const isClosing = ref(false)

@@ -7,6 +7,8 @@ export const siteContent: SiteContentResponse = {
     headline: 'A soprano exploring opera, recital, and the emotional power of the human voice.',
     intro:
       'Ruijia Zhang is a soprano currently undertaking postgraduate study at the Royal Northern College of Music under the guidance of Sarah Rhodes. Her musical path began with Memory from Cats and has grown through opera performance, choral stages, classical concerts, and competitions. This site gathers her profile, honors, and scenes from performance as she continues to refine her voice and share music with wider audiences.',
+    dmaInterest:
+      'Ruijia is currently seeking opportunities to pursue a Doctor of Musical Arts (DMA) in vocal performance.',
     location: 'Manchester, United Kingdom',
     email: '',
     homeImagePath: resolveMediaAsset('/media/site/home/home-portrait.jpeg'),
@@ -39,6 +41,10 @@ export const aboutContent: AboutContentResponse = {
     {
       key: 'artistic-focus',
       html: `Ruijia is committed to continuing her artistic development as a soprano, with a particular focus on <span class="highlight">opera performance, vocal refinement and expressive stage communication</span>. She hopes to build a career that allows her to share the emotional power of music with wider audiences.`,
+    },
+    {
+      key: 'recent-training-and-performance',
+      html: `Recent training and performance highlights include a little lecture with David Norris, <span class="highlight">masterclasses with Emanuela De Santis Salucci, Susan McCulloch and Ron Morris</span>, and performing the <span class="highlight">role of Angelica</span> in Martín y Soler’s Il burbero di buon cuore as part of the RNCM Opera Scenes. Ruijia was also selected as a <span class="highlight">finalist for The Joyce and Michael Kennedy Award for the Singing of Strauss</span>.`,
     },
   ],
   aboutImagePath: resolveMediaAsset('/media/site/about/about-portrait.jpeg'),
@@ -161,5 +167,6 @@ export const galleryContent: GalleryContentResponse = {
     { key: 'video-493280724', type: 'video', alt: 'Performance video 4', srcPath: resolveMediaAsset('/media/gallery/493280724.mp4') },
     { key: 'video-571942330', type: 'video', alt: 'Performance video 5', srcPath: resolveMediaAsset('/media/gallery/571942330.mp4') },
     { key: 'video-709622218', type: 'video', alt: 'Performance video 6', srcPath: resolveMediaAsset('/media/gallery/709622218.mp4') },
+    { key: 'video-2008734611', type: 'video', alt: 'Performance video 7', srcPath: resolveMediaAsset('/media/gallery/2008734611.mp4') },
   ],
 };
